@@ -1,144 +1,110 @@
 # Sales Dashboard Analysis
 
-## Project Overview
-This project explores E-Commerce sales performance, uncovering key trends in customer behavior, revenue patterns, and product interactions.
+## Overview
 
-The objective is to simulate a real-world business scenario where data is transformed into actionable insights for strategic decision-making.
+Built an interactive sales dashboard to analyze customer behavior, identify revenue trends, and support data-driven marketing decisions.
 
----
-
-## Company Context (Fictitious)
-This analysis is based on a fictional e-commerce company, ShopSphere, an online retail platform that sells a wide range of consumer goods to a diverse customer base.
-
-The company operates in a competitive market and seeks to better understand:
-- Customer purchasing behavior  
-- Sales performance across time  
-- Demographic influences on revenue  
+This project simulates a real-world business scenario where raw transactional data is transformed into actionable insights for stakeholders.
 
 ---
 
-## Product Focus
-ShopSphere’s core offering revolves around fast-moving consumer goods (FMCGs) sold through an online platform.
+## Key Impact (What Matters Most)
 
-This project focuses on:
-- Customer transactions (basket-level data)  
-- Purchase frequency and behavior  
-- Temporal sales patterns (daily and monthly trends)  
-
-The goal is to identify what drives customer activity and sales performance.
+- Identified **highest-value customer segment (ages 25–34)** driving the majority of transactions  
+- Discovered **peak sales days (Monday & Saturday)** for optimized campaign timing  
+- Detected **monthly performance drop (May → June)** indicating potential seasonality or campaign gaps  
+- Enabled **data-driven decision-making** through an interactive dashboard  
 
 ---
 
-## Role: External Data Analyst
-In this project, I assumed the role of an External Data Analyst engaged by ShopSphere to:
+## Business Problem
 
-- Audit and clean existing transactional data  
-- Build a structured data model for analysis  
-- Develop an interactive dashboard for stakeholders  
-- Extract insights to support marketing and sales strategy  
+ShopSphere (fictional e-commerce company) lacked visibility into:
 
----
+- Who their most valuable customers are  
+- When customers are most active  
+- How sales performance changes over time  
 
-## Business Objectives
-The company aims to:
-
-- Identify high-performing customer segments  
-- Understand when customers are most active  
-- Evaluate monthly sales performance trends  
-- Support data-driven marketing and campaign decisions  
+Without this, marketing and sales decisions were largely guesswork.
 
 ---
 
-## Project Walkthrough (Video)
-[ Watch Full Walkthrough](https://youtu.be/0FkxOB4j2aA)
+## Solution
 
-A short walkthrough of the dashboard, key metrics, and insights.
+Developed a structured analytics workflow:
 
----
-
-## Dashboard Preview
-sales-dashboard-project/Screenshot 2025-11-18 102623.png
-
-Interactive dashboard built using Excel tools (Power Query and Power Pivot).
+- Cleaned and validated transactional data  
+- Built a relational data model (Customer + Basket data)  
+- Designed an interactive Excel dashboard with dynamic filtering  
+- Delivered insights aligned with business goals  
 
 ---
 
-## Data Source
-The dataset was sourced from a Kaggle challenge, containing:
-- Customer demographic data  
-- Basket transaction records  
-- Purchase behavior across different time periods  
+## Dashboard
+
+![Dashboard Screenshot](sales-dashboard-project/Screenshot%202025-11-18%20102623.png)
 
 ---
 
-## Tools and Technologies
-- Microsoft Excel  
-- Power Query (Data Cleaning and Transformation)  
+## Walkthrough
+
+https://youtu.be/0FkxOB4j2aA
+
+---
+
+## Insights
+
+**Customer Behavior**
+- 72 active customers analyzed  
+- Most active age group: **25–34**  
+
+**Sales Trends**
+- Highest activity on **Monday and Saturday**  
+- Strong performance in May, followed by a noticeable drop in June  
+
+**Demographics**
+- Customer base is **81% male**, indicating an imbalance in engagement  
+
+---
+
+## Recommendations
+
+- Focus marketing on **high-performing age segment (25–34)**  
+- Schedule campaigns around **peak days (Mon, Sat)**  
+- Investigate **June performance drop** (campaign effectiveness, seasonality, or external factors)  
+- Improve targeting strategies to increase **female customer engagement**  
+
+---
+
+## Tools Used
+
+- Excel  
+- Power Query (Data Cleaning)  
 - Power Pivot (Data Modeling)  
-- Pivot Tables and Charts  
-
----
-
-## Approach
-
-- Performed data cleaning and transformation using Power Query  
-- Built a relational data model using an inner join:
-  - Customer Details and Basket Details  
-- Focused analysis on valid and complete customer transactions only  
-- Designed an interactive dashboard using slicers and dynamic visuals  
-
----
-
-## Key Insights and Metrics
-
-### Customer and Sales Overview
-- Customer Base: 72 active customers  
-- Average Age: 35 years  
-- Total Baskets Processed: 155  
-- Total Customer Tenure: 4,045 months  
-
-### Demographics
-- Male: 81%  
-- Female: 19%  
-
-### Behavioral Insights
-- Top Age Segment: 25–34 years (highest basket activity)  
-- Strongest Sales Days: Monday and Saturday  
-- Monthly Trend:
-  - May significantly outperformed June  
-  - Indicates seasonality and campaign-driven performance  
-
----
-
-## Business Recommendations
-
-Based on the analysis, the following actions are recommended:
-
-- Target high-performing age group (25–34) by aligning marketing campaigns and product positioning  
-- Leverage peak sales days (Monday and Saturday) for promotions and advertising  
-- Investigate the drop in June performance to identify contributing factors  
-- Develop strategies to improve engagement among female customers  
+- Pivot Tables & Charts  
 
 ---
 
 ## Skills Demonstrated
-- Data Cleaning and Transformation (Power Query)  
-- Data Modeling (Inner Join Relationships)  
+
+- Data Cleaning & Transformation  
+- Data Modeling (Relational Joins)  
 - Exploratory Data Analysis  
-- KPI Development and Trend Analysis  
-- Dashboard Design and Interactivity (Slicers)  
+- Dashboard Development  
 - Business Insight Communication  
 
 ---
 
-## Project Value
-This project demonstrates the ability to:
-- Translate raw data into business insights  
-- Approach analysis from a stakeholder perspective  
-- Present findings in a clear, decision-ready format  
+## Why This Project Stands Out
+
+- Focuses on **business impact, not just visuals**  
+- Demonstrates **end-to-end analytics workflow**  
+- Shows ability to **translate data into decisions**  
+- Built with tools commonly used in real business environments  
 
 ---
 
-## Connect With Me
+## Contact
+
 - LinkedIn: https://www.linkedin.com/in/tjumukoro95  
-- Email: teryjosephumukoro95@gmail.com
+- Email: teryjosephumukoro95@gmail.com  
