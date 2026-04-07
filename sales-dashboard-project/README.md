@@ -50,14 +50,14 @@ The company aims to:
 ---
 
 ## Project Walkthrough (Video)
-[Watch Dashboard Demo](https://your-video-link-here.com)
+[ Watch Full Walkthrough](https://youtu.be/0FkxOB4j2aA)
 
 A short walkthrough of the dashboard, key metrics, and insights.
 
 ---
 
 ## Dashboard Preview
-![Sales Dashboard](visuals/dashboard.png)
+sales-dashboard-project/Screenshot 2025-11-18 102623.png
 
 Interactive dashboard built using Excel tools (Power Query and Power Pivot).
 
