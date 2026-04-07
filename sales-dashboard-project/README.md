@@ -42,7 +42,7 @@ Developed a structured analytics workflow:
 
 ## Dashboard
 
-![Dashboard Screenshot](sales-dashboard-project/Screenshot%202025-11-18%20102623.png)
+![Dashboard Screenshot](https://github.com/Jaytee4000/data-analytics-portfolio/blob/2226515fd4341c461aab59d3e7e3457dead967b9/sales-dashboard-project/Sales%20Dashboard.png)
 
 ---
 
