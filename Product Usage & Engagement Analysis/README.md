@@ -146,7 +146,8 @@ This reflects real-world analytical practice where tool selection must align wit
 - Strengthen loyalty programs to move customers into higher-value segments  
 - Retain high-value customers (Champions) with exclusive incentives  
 - Re-engage one-time buyers using personalized marketing  
-- Improve data governance to prevent inconsistencies in future datasets  
+- Improve data governance to prevent inconsistencies in future datasets
+- Optimize marketing efforts to Germany, France and Ireland for a start with aim to expand market reach 
 
 ---
 
