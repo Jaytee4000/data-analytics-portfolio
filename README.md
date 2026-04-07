@@ -55,7 +55,7 @@ My work emphasizes:
 - Dashboard design  
 
 **Link:**  
-`sales-dashboard-project/`
+`https://github.com/Jaytee4000/data-analytics-portfolio/tree/a6decde6c3b725c8929903813c3883994fa9bcf2/sales-dashboard-project/`
 
 ---
 
@@ -68,7 +68,7 @@ My work emphasizes:
 - Product interaction trends  
 
 **Link:**  
-`Product Usage & Engagement Analysis/`
+`https://github.com/Jaytee4000/data-analytics-portfolio/tree/a6decde6c3b725c8929903813c3883994fa9bcf2/Product%20Usage%20%26%20Engagement%20Analysis/`
 
 ---
 
