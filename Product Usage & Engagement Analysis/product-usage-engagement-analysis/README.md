@@ -182,7 +182,7 @@ This indicates:
 
 ---
 
-## Dashboard
+## Dashboard 
 
 ### Sales & Engagement Overview
 ![Overview](https://github.com/Jaytee4000/data-analytics-portfolio/blob/e48401abd8012052d8656c93da310908204d46e4/Product%20Usage%20%26%20Engagement%20Analysis/Overview.png)
