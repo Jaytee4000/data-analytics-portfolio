@@ -223,7 +223,7 @@ A relatively small customer base generates high transaction frequency and revenu
 
 ### Transaction Trends
 
-![Time Analysis](https://github.com/Jaytee4000/data-analytics-portfolio/blob/58fa5548b1f1846a9170dc70689ae15b04a945b3/Product%20Usage%20%26)
+![Time Analysis](https://github.com/Jaytee4000/data-analytics-portfolio/blob/bd48600ea6c9136a19dc54bd2eb41cf2cde4bb89/Product%20Usage%20%26%20Engagement%20Analysis/product-usage-engagement-analysis/Time%20Analysis.png)
 
 **Key Insight:**
 User activity is concentrated during weekdays and afternoons, with strong Q4 spikes, indicating time-bound and seasonal engagement patterns.
