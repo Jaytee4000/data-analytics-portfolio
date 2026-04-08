@@ -184,5 +184,5 @@ This project demonstrates the ability to:
 ---
 
 ## Connect With Me
-- LinkedIn: https://www.linkedin.com/in/your-link  
-- Email: your-email@example.com
+- LinkedIn: https://www.linkedin.com/in/tjumukoro95  
+- Email: terryjosephumukoro95@gmail.com
