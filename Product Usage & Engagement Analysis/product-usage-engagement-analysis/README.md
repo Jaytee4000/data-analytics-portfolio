@@ -188,7 +188,7 @@ This indicates:
 ![Overview](https://github.com/Jaytee4000/data-analytics-portfolio/blob/e48401abd8012052d8656c93da310908204d46e4/Product%20Usage%20%26%20Engagement%20Analysis/Overview.png)
 
 ### Transaction Trends
-![Time Analysis](https://github.com/Jaytee4000/data-analytics-portfolio/blob/586eedc587b6f1b0b0b01e19d8f1eca4297035df/Product%20Usage%20%26%20%26%20Engagement%20Analysis/Time%20Analysis.png)
+![Time Analysis](https://github.com/Jaytee4000/data-analytics-portfolio/blob/58fa5548b1f1846a9170dc70689ae15b04a945b3/Product%20Usage%20%26%20Engagement%20Analysis/product-usage-engagement-analysis/Time%20Analysis.png)
 
 ---
 
