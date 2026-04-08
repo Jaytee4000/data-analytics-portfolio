@@ -1,188 +1,246 @@
 # E-Commerce Product Usage & Engagement Analysis
 
-## Project Overview
-This project analyses large-scale e-commerce transactional data to uncover patterns in customer behavior, sales performance, and engagement trends.
+## Overview
 
-The analysis simulates a real-world scenario where raw, unstructured data must be cleaned, transformed, and modeled before meaningful insights can be derived.
+Analyzed over 1 million e-commerce transactions to uncover patterns in customer behavior, engagement, and sales performance.
+
+This project simulates a real-world product analytics scenario where raw, unstructured data is transformed into actionable insights to support product, marketing, and growth decisions.
 
 ---
 
-## Company Context (Fictitious)
-This analysis is based on a fictional UK-based e-commerce company, ShopSphere, which sells a wide range of consumer goods across multiple countries.
+## Key Impact
 
-The company aims to better understand:
+- Processed and cleaned **1M+ rows**, improving data reliability by removing ~23% invalid records  
+- Identified **repeat customers (75.6%) as primary revenue drivers**  
+- Discovered **peak engagement periods (Thursdays, mornings, Q4 seasonality)**  
+- Highlighted **high-value customer segments (Champions & Regulars)**  
+- Revealed **user drop-off between first purchase and repeat engagement**  
+
+---
+
+## Business Context
+
+This analysis is based on a fictional UK-based e-commerce company, **ShopSphere**, operating across multiple international markets.
+
+The company aims to understand:
+
 - Customer engagement and retention  
-- Sales trends over time  
+- Product usage behavior  
 - Geographic performance  
-- Seasonal and behavioral purchasing patterns  
+- Seasonal purchasing trends  
 
 ---
 
-## Role: External Product Data Analyst
-In this project, I assumed the role of an External Product Data Analyst engaged to:
+## Problem Statement
 
-- Audit and clean raw transactional data  
-- Build a scalable data model for analysis  
-- Identify key drivers of customer engagement  
-- Deliver insights to support product, marketing, and operations teams  
+ShopSphere lacks visibility into how users interact with its platform.
+
+Key questions include:
+
+- What does active usage look like?  
+- Which customer segments drive engagement?  
+- Where do users drop off in their lifecycle?  
+- How does engagement vary across time and geography?  
+
+---
+
+## Role
+
+**External Product Data Analyst**
+
+- Cleaned and validated large-scale transactional data  
+- Built a scalable data model for analysis  
+- Defined engagement and behavioral metrics  
+- Delivered insights to inform product and marketing strategy  
 
 ---
 
 ## Dataset Overview
 
-### Raw Dataset
-Two datasets were provided:
+### Raw Data
 
-- **2009–2010**
-  - Rows: 525,462  
-  - Columns: 8  
+- 2009–2010: 525,462 rows  
+- 2010–2011: 541,011 rows  
 
-- **2010–2011**
-  - Rows: 541,011  
-  - Columns: 8  
-
-**Total Raw Rows:** 1,066,473  
+**Total:** 1,066,473 rows  
 
 ---
 
-### After Cleaning & Transformation
+### After Cleaning
 
-- **Final Rows:** 820,626  
-- **Rows Removed:** 245,847  
-- **Data Reduction:** ~23.05%  
+- Final dataset: 820,626 rows  
+- Rows removed: 245,847  
+- Reduction: ~23.05%  
 
 ---
 
-## Data Cleaning Summary
+## Data Cleaning & Preparation
 
-To ensure analytical accuracy, the dataset was rigorously cleaned:
+To ensure analytical accuracy:
 
-- Removed rows with missing Customer IDs  
+- Removed missing Customer IDs  
 - Excluded cancelled transactions  
-- Removed non-product StockCodes (e.g. adjustments, test entries, bank charges)  
-- Eliminated negative or zero quantities  
+- Filtered non-product StockCodes (e.g. adjustments, charges)  
+- Removed negative/zero quantities  
 - Standardized country naming (EIRE → Ireland)  
-- Appended both datasets into a unified structure  
+- Combined both datasets into a unified model  
 
 ---
 
 ## Critical Data Insight
 
-The removal of over 240,000 rows highlights how operational and system-generated data can significantly distort product analytics if not properly cleaned.
+Over **240,000 rows were removed**, highlighting how raw operational data can distort analysis.
 
-This demonstrates that:
-- Raw data is not inherently reliable  
-- Data cleaning is essential, not optional  
-- Poor data quality can lead to misleading business decisions  
+This reinforces that:
 
----
-
-## Performance & Tooling Consideration
-
-Due to the size of the dataset (over 1 million rows), Excel presented performance limitations during transformation, particularly with iterative filtering in Power Query.
-
-To address this:
-- The workflow was transitioned to Power BI for improved performance  
-- A more scalable and structured data transformation approach was implemented  
-
-This reflects real-world analytical practice where tool selection must align with data scale and complexity.
+- Data cleaning is essential for reliable insights  
+- Poor data quality directly impacts business decisions  
 
 ---
 
-## Dashboard Preview
+## Performance & Tooling
+
+Due to dataset size (>1M rows), Excel showed performance limitations.
+
+Solution:
+- Transitioned to **Power BI** for scalable transformation and analysis  
+- Implemented a more efficient data modeling workflow  
+
+---
+
+## Product Analytics Insights
+
+### Active Usage
+
+Active usage was defined as customers completing at least one valid transaction.
+
+- Strong concentration of activity during **morning and afternoon hours**  
+- Peak usage observed on **Thursdays**, indicating pre-weekend purchasing behavior  
+- Significant spikes in **Q4 (Oct–Dec)** driven by seasonal demand  
+
+---
+
+### Feature Engagement
+
+Engagement was evaluated through transaction behavior and repeat activity:
+
+- **75.63% repeat customers** indicate strong product-market fit  
+- A small group of high-frequency users contributes disproportionately to total activity  
+- Customer **12748** recorded the highest engagement (343 transactions)  
+
+This suggests that:
+- Repeat interaction is a key driver of business performance  
+- High-engagement users represent critical product value  
+
+---
+
+### User Drop-Off
+
+A simplified lifecycle analysis shows:
+
+- High initial customer acquisition  
+- Significant drop-off after first purchase (24.37% one-time buyers)  
+- Only a subset transitions into repeat or high-value users  
+
+This indicates:
+- Friction in post-purchase engagement  
+- Opportunity to improve retention strategies  
+
+---
+
+### Customer Segmentation
+
+- **Champions (10+ transactions):** Highest value, lowest volume  
+- **Regular Customers:** Core revenue contributors  
+- **Occasional Customers:** Growth opportunity  
+- **One-Time Buyers:** High drop-off segment  
+
+---
+
+### Time-Based Trends
+
+- Peak day: **Thursday**  
+- Peak periods: **Morning & Afternoon**  
+- Strong **Q4 seasonality**  
+- Post-holiday decline in **January–February**  
+- Overall upward trend (2009–2011)  
+
+---
+
+### Geographic Insights
+
+- UK dominates revenue and transaction volume  
+- Germany, France, and Ireland show growth potential  
+
+---
+
+### Data Quality Observations
+
+- 2009 data limited to December (not suitable for full-year comparison)  
+- Duplicate country naming (EIRE vs Ireland)  
+- Invalid timestamps (31/12/1899) indicate parsing issues  
+
+---
+
+## Dashboard
 
 ### Sales & Engagement Overview
 ![Overview](https://github.com/Jaytee4000/data-analytics-portfolio/blob/e48401abd8012052d8656c93da310908204d46e4/Product%20Usage%20%26%20Engagement%20Analysis/Overview.png)
 
 ### Transaction Trends
-![Time Analysis](https://github.com/Jaytee4000/data-analytics-portfolio/blob/586eedc587b6f1b0b0b01e19d8f1eca4297035df/Product%20Usage%20%26%20Engagement%20Analysis/Time%20Analysis.png)
-
----
-
-## Key Insights
-
-### Time-Based Insights
-- Thursday is the peak transaction day, indicating pre-weekend purchasing behavior  
-- Morning and afternoon periods drive the highest activity  
-- Strong seasonal spikes occur in Q4 (October–December)  
-- Post-holiday decline observed in January and February  
-- Overall upward trend from 2009 to 2011 indicates business growth  
-
----
-
-### Customer Engagement Insights
-- 75.63% of customers are repeat buyers  
-- 24.37% are one-time buyers  
-- Customer 12748 recorded the highest activity with 343 transactions  
-- A small group of high-frequency users drives a large share of transactions  
-
----
-
-### Customer Segmentation Insights
-- Regular customers form the largest segment  
-- Occasional customers represent strong growth potential  
-- Champions (10+ transactions) are the most valuable but smallest group  
-- One-time buyers present re-engagement opportunities  
-
----
-
-### Geographic Insights
-- The United Kingdom dominates both revenue and transaction volume  
-- Germany, France, and Ireland follow but at significantly lower levels  
-
----
-
-### Data Quality Observations
-- 2009 data is limited to December and should not be used for full-year comparison  
-- EIRE and Ireland appear as separate entries and require consolidation  
-- Some timestamps default to 31/12/1899, indicating parsing issues  
+![Time Analysis](https://github.com/Jaytee4000/data-analytics-portfolio/blob/586eedc587b6f1b0b0b01e19d8f1eca4297035df/Product%20Usage%20%26%20%26%20Engagement%20Analysis/Time%20Analysis.png)
 
 ---
 
 ## Business Recommendations
 
-- Align promotions with peak activity periods (Thursday and weekends)  
-- Launch mid-week marketing campaigns to drive conversions  
-- Strengthen loyalty programs to move customers into higher-value segments  
-- Retain high-value customers (Champions) with exclusive incentives  
-- Re-engage one-time buyers using personalized marketing  
-- Improve data governance to prevent inconsistencies in future datasets
-- Optimize marketing efforts to Germany, France and Ireland for a start with aim to expand market reach 
+- Align promotions with **peak engagement periods (Thursdays, Q4)**  
+- Improve **post-purchase engagement** to reduce drop-off  
+- Strengthen loyalty programs to grow **Champion customers**  
+- Re-engage one-time buyers with targeted campaigns  
+- Expand marketing efforts in **Germany, France, and Ireland**  
+- Improve data governance to prevent inconsistencies  
 
 ---
 
-## Tools and Technologies
-- Microsoft Excel  
+## Tools & Technologies
+
+- Excel  
 - Power Query  
 - Power BI  
-- Data Modeling and Transformation Techniques  
+- Data Modeling Techniques  
 
 ---
 
 ## Skills Demonstrated
-- Large-scale data cleaning and validation  
-- Data modeling and transformation  
-- Performance-aware tool selection  
-- Customer segmentation and behavioral analysis  
+
+- Large-scale data cleaning (1M+ rows)  
+- Product analytics thinking (engagement, retention, lifecycle)  
+- Customer segmentation  
 - Time-series analysis  
-- Business insight generation and storytelling  
+- Performance-aware tool selection  
+- Business insight communication  
 
 ---
 
-## Project Value
+## Why This Project Matters
+
 This project demonstrates the ability to:
-- Handle large, messy datasets in a realistic environment  
-- Identify and correct data quality issues  
-- Translate data into actionable business insights  
-- Think beyond analysis into product and business strategy  
+
+- Work with real-world, messy datasets at scale  
+- Apply product thinking to user behavior analysis  
+- Identify engagement drivers and drop-off points  
+- Translate data into actionable business strategy  
 
 ---
 
-## Project Walkthrough (Video)
+## Project Walkthrough
+
 [Watch Dashboard Demo](https://youtu.be/sUwxbkWZmfw?si=tCHEo4tr2eJdBxo0)
 
 ---
 
-## Connect With Me
+## Contact
+
 - LinkedIn: https://www.linkedin.com/in/tjumukoro95  
-- Email: terryjosephumukoro95@gmail.com
+- Email: terryjosephumukoro95@gmail.com  
