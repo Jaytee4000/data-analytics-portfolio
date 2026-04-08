@@ -223,7 +223,7 @@ A relatively small customer base generates high transaction frequency and revenu
 
 ### Transaction Trends
 
-![Time Analysis](https://github.com/Jaytee4000/data-analytics-portfolio/blob/58fa5548b1f1846a9170dc70689ae15b04a945b3/Product%20Usage%20%26
+![Time Analysis](https://github.com/Jaytee4000/data-analytics-portfolio/blob/58fa5548b1f1846a9170dc70689ae15b04a945b3/Product%20Usage%20%26)
 
 **Key Insight:**
 User activity is concentrated during weekdays and afternoons, with strong Q4 spikes, indicating time-bound and seasonal engagement patterns.
@@ -232,7 +232,7 @@ User activity is concentrated during weekdays and afternoons, with strong Q4 spi
 
 ### Sales & Revenue by Geography
 
-![Georgraphic Analysis]()
+![Georgraphic Analysis](https://github.com/Jaytee4000/data-analytics-portfolio/blob/8d43a2bb785a7c3b8fe9eae869cc032712c17361/Product%20Usage%20%26%20Engagement%20Analysis/product-usage-engagement-analysis/Geographic%20Analysis.png)
 
 **Key Insight:**
 Revenue is heavily concentrated in the UK, highlighting both market dominance and geographic risk exposure.
@@ -241,7 +241,7 @@ Revenue is heavily concentrated in the UK, highlighting both market dominance an
 
 ### Customer Segmentation Analysis
 
-![Customer Segmentation]()
+![Customer Segmentation](https://github.com/Jaytee4000/data-analytics-portfolio/blob/8d43a2bb785a7c3b8fe9eae869cc032712c17361/Product%20Usage%20%26%20Engagement%20Analysis/product-usage-engagement-analysis/Customer%20Segmentation.png)
 
 **Key Insight:**
 Engagement and revenue are driven by a small but loyal customer base. Regulars and Champions sustain the business while Occasionals and One-Time Buyers represent the largest opportunity for lifecycle progression and re-engagement.
