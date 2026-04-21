@@ -146,7 +146,7 @@ The overall 26.3% churn rate is primarily driven by the Free tier, which represe
 ### Overview
 
 <!-- Replace with your screenshot: drag the image into the GitHub file upload -->
-![Overview Page](screenshots/overview.png)
+![Overview Page](https://github.com/Jaytee4000/data-analytics-portfolio/blob/ed8f8f3d153afee8a3e808967a4cd047c0137aae/Product%20Usage%20%26%20Engagement%20Analysis/Learnpath%20Pro/Images/Overview.png)
 
 **Key Insight:**
 Retention is strong among paid users, but the Free tier's 35% churn rate and 19.9% course completion rate signal significant early-lifecycle engagement gaps.
@@ -156,7 +156,7 @@ Retention is strong among paid users, but the Free tier's 35% churn rate and 19.
 ### Session & Engagement Analysis
 
 <!-- Replace with your screenshot -->
-![Session Analysis](screenshots/session-analysis.png)
+![Session Analysis](https://github.com/Jaytee4000/data-analytics-portfolio/blob/ed8f8f3d153afee8a3e808967a4cd047c0137aae/Product%20Usage%20%26%20Engagement%20Analysis/Learnpath%20Pro/Images/Engagement_Analysis.png)
 
 **Key Insight:**
 Enterprise users engage most deeply per session despite lower total volume. Pro users drive the bulk of platform activity, while Free users show shallow, short-form engagement patterns.
@@ -166,27 +166,17 @@ Enterprise users engage most deeply per session despite lower total volume. Pro 
 ### Feature Adoption
 
 <!-- Replace with your screenshot -->
-![Feature Adoption](screenshots/feature-adoption.png)
+![Feature Adoption](https://github.com/Jaytee4000/data-analytics-portfolio/blob/ed8f8f3d153afee8a3e808967a4cd047c0137aae/Product%20Usage%20%26%20Engagement%20Analysis/Learnpath%20Pro/Images/Feature_Analysis.png)
 
 **Key Insight:**
 The core learning loop (Video Lessons, Quizzes, Progress Tracker) carries engagement, while premium features like Live Sessions remain significantly underused — representing the clearest upsell opportunity on the platform.
 
 ---
 
-### Churn & Retention
-
-<!-- Replace with your screenshot -->
-![Churn & Retention](screenshots/churn-retention.png)
-
-**Key Insight:**
-Churn is tier-driven. Free users churn at 7x the rate of Enterprise users, confirming that paid commitment correlates strongly with sustained engagement.
-
----
-
 ### Geographic & Demographic Breakdown
 
 <!-- Replace with your screenshot -->
-![Geographic Analysis](screenshots/geographic-analysis.png)
+![Geographic Analysis](https://github.com/Jaytee4000/data-analytics-portfolio/blob/ed8f8f3d153afee8a3e808967a4cd047c0137aae/Product%20Usage%20%26%20Engagement%20Analysis/Learnpath%20Pro/Images/User%20Segments.png)
 
 **Key Insight:**
 Nigeria, the USA, and the UK lead acquisition. The concentration of users in African markets and the 25–34 age group presents a clear strategic opportunity for localised content and career-focused course offerings.
@@ -228,7 +218,6 @@ Enterprise users show the highest session depth and lowest churn. Develop a clea
 - Power Query
 - DAX (Data Analysis Expressions)
 - Data Modeling
-- Excel
 
 ---
 
