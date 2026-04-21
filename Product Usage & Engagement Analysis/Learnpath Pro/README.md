@@ -243,22 +243,6 @@ This project demonstrates the ability to:
 
 ---
 
-## Project Structure
-
-```
-LearnPath-Pro-Analysis/
-├── README.md
-├── screenshots/
-│   ├── overview.png
-│   ├── session-analysis.png
-│   ├── feature-adoption.png
-│   ├── churn-retention.png
-│   └── geographic-analysis.png
-└── learnpath-pro-insights-report.pdf
-```
-
----
-
 ## Contact
 
 - LinkedIn: [linkedin.com/in/tjumukoro95](https://www.linkedin.com/in/tjumukoro95)
