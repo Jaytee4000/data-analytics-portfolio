@@ -104,4 +104,4 @@ Across all projects, I follow a structured workflow:
 ## Contact
 
 - LinkedIn: https://www.linkedin.com/in/tjumukoro95  
-- Email: teryjosephumukoro95@gmail.com  
+- Email: terryjosephumukoro95@gmail.com  
