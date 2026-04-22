@@ -186,7 +186,7 @@ Nigeria, the USA, and the UK lead acquisition. The concentration of users in Afr
 ## Project Walkthrough
 
 <!-- Replace with your screen recorded video link once uploaded -->
-[▶ Watch Dashboard Walkthrough](https://youtu.be/your-video-link-here)
+[▶ Watch Dashboard Walkthrough](https://youtu.be/MLrqan7xWxM)
 
 ---
 
