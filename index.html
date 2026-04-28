@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Terry Joseph-Umukoro | Data Analytics Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0C0E14;
+      --surface: #111318;
+      --card: #171A23;
+      --border: #1F2130;
+      --accent: #F59E0B;
+      --accent2: #6366F1;
+      --text: #E8E8F0;
+      --muted: #7A7D9A;
+      --white: #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NOISE OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 5%;
+      background: rgba(12,14,20,0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--white);
+      letter-spacing: -0.02em;
+    }
+
+    .nav-logo span { color: var(--accent); }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--accent); }
+
+    .nav-cv {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--accent);
+      color: #000;
+      padding: 0.45rem 1.1rem;
+      border-radius: 7px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .nav-cv:hover { background: #FBBF24; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 8rem 5% 4rem;
+      position: relative;
+    }
+
+    .hero-glow {
+      position: absolute;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(245,158,11,0.07) 0%, transparent 70%);
+      top: 10%; left: -10%;
+      pointer-events: none;
+    }
+
+    .hero-glow2 {
+      position: absolute;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(99,102,241,0.06) 0%, transparent 70%);
+      bottom: 10%; right: 0%;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content { max-width: 680px; }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(245,158,11,0.08);
+      border: 1px solid rgba(245,158,11,0.22);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 2rem;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .hero-tag::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.6s 0.1s ease both;
+    }
+
+    h1 .accent { color: var(--accent); }
+    h1 .accent2 { color: var(--accent2); }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 1.2rem;
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-bottom: 2.5rem;
+      animation: fadeUp 0.6s 0.25s ease both;
+    }
+
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .hero-meta-item svg { color: var(--accent); flex-shrink: 0; }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      animation: fadeUp 0.6s 0.3s ease both;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.8rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #000;
+    }
+
+    .btn-primary:hover {
+      background: #FBBF24;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(245,158,11,0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* ── HEADSHOT ── */
+    .hero-photo {
+      animation: fadeUp 0.8s 0.2s ease both;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-photo-wrap {
+      position: relative;
+      width: 240px;
+      height: 300px;
+      flex-shrink: 0;
+    }
+
+    /* Amber gradient border ring */
+    .hero-photo-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 16px;
+      background: linear-gradient(145deg, rgba(245,158,11,0.6), rgba(99,102,241,0.3), transparent 60%);
+      z-index: 0;
+    }
+
+    .hero-photo-wrap img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 14px;
+      display: block;
+      filter: grayscale(10%) contrast(1.05);
+    }
+
+    /* Subtle fade at bottom to blend into bg */
+    .hero-photo-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 40%;
+      background: linear-gradient(to top, rgba(12,14,20,0.5), transparent);
+      border-radius: 0 0 14px 14px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 2rem 5%;
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      text-align: center;
+      animation: fadeUp 0.5s ease both;
+    }
+
+    .stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent);
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 6rem 5%; position: relative; z-index: 1; }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .section-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    /* ── ABOUT ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+      font-size: 1rem;
+    }
+
+    .about-text p strong { color: var(--text); font-weight: 500; }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .skill-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.2rem;
+      transition: border-color 0.2s;
+    }
+
+    .skill-card:hover { border-color: rgba(245,158,11,0.3); }
+
+    .skill-card-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+
+    .skill-card ul { list-style: none; }
+
+    .skill-card li {
+      font-size: 0.85rem;
+      color: var(--muted);
+      padding: 0.2rem 0;
+    }
+
+    .skill-card li::before {
+      content: '→ ';
+      color: var(--accent);
+      font-size: 0.75rem;
+    }
+
+    /* ── PROJECTS ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2rem;
+      transition: all 0.25s;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      border-color: rgba(245,158,11,0.2);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .project-card:hover::before { transform: scaleX(1); }
+
+    .project-card.wip {
+      border-color: rgba(108,99,255,0.2);
+    }
+
+    .project-number {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+
+    .project-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.01em;
+    }
+
+    .project-goal {
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tag {
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 0.25rem 0.7rem;
+      border-radius: 100px;
+      background: rgba(245,158,11,0.08);
+      color: var(--accent);
+      border: 1px solid rgba(245,158,11,0.18);
+      letter-spacing: 0.04em;
+    }
+
+    .tag.purple {
+      background: rgba(108,99,255,0.08);
+      color: var(--accent2);
+      border-color: rgba(108,99,255,0.15);
+    }
+
+    .project-highlights {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-highlights li {
+      font-size: 0.83rem;
+      color: var(--muted);
+      padding: 0.3rem 0;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .project-highlights li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.7rem;
+      top: 0.35rem;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.83rem;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0,212,170,0.2);
+      padding-bottom: 2px;
+      transition: all 0.2s;
+      align-self: flex-start;
+    }
+
+    .project-link:hover {
+      border-color: var(--accent);
+      gap: 0.7rem;
+    }
+
+    .wip-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--accent2);
+      background: rgba(108,99,255,0.08);
+      border: 1px solid rgba(108,99,255,0.2);
+      padding: 0.25rem 0.8rem;
+      border-radius: 100px;
+      letter-spacing: 0.04em;
+      align-self: flex-start;
+    }
+
+    /* ── CERTIFICATIONS ── */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .cert-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.4rem 1.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      transition: border-color 0.2s;
+    }
+
+    .cert-card:hover { border-color: rgba(245,158,11,0.3); }
+
+    .cert-card.pending {
+      opacity: 0.55;
+      border-style: dashed;
+    }
+
+    .cert-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      line-height: 1;
+      margin-top: 0.1rem;
+    }
+
+    .cert-issuer {
+      font-size: 0.68rem;
+      color: var(--muted);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+
+    .cert-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.3;
+    }
+
+    /* ── APPROACH ── */
+    .approach-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      counter-reset: step;
+    }
+
+    .step {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      counter-increment: step;
+      position: relative;
+    }
+
+    .step::before {
+      content: counter(step, decimal-leading-zero);
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: rgba(245,158,11,0.12);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .step p {
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+
+    .step strong { color: var(--text); display: block; margin-bottom: 0.3rem; font-weight: 500; }
+
+    /* ── CONTACT ── */
+    .contact-section {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      z-index: 2;
+    }
+
+    .contact-inner {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-inner h2 { margin-bottom: 0.8rem; }
+
+    .contact-inner p {
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 2rem 5%;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-photo { display: none; }
+    }
+
+    @media (max-width: 768px) {
+      nav ul { display: none; }
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .skills-grid { grid-template-columns: 1fr 1fr; }
+      .stats-bar { gap: 2rem; }
+    }
+
+    @media (max-width: 480px) {
+      .skills-grid { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .certs-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">TJ<span>.</span></div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="Terry Joseph-Umukoro CV.pdf" class="nav-cv" download>Download CV ↓</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-glow2"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-tag">Open to Work — Remote &amp; Hybrid (Abuja)</div>
+        <h1>
+          Turning raw data<br/>into <span class="accent">clear insight</span><br/>&amp; <span class="accent2">real decisions</span>
+        </h1>
+        <p class="hero-sub">
+          Data Analyst specialising in product analytics, dashboard design, and communicating findings that drive business action — across Finance, Tech &amp; Retail.
+        </p>
+        <div class="hero-meta">
+          <span class="hero-meta-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Kogi State, Nigeria
+          </span>
+          <span class="hero-meta-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+            ~2 Years Experience
+          </span>
+          <span class="hero-meta-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+            Finance · Tech · Retail
+          </span>
+        </div>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary">View Projects ↓</a>
+          <a href="Terry Joseph-Umukoro CV.pdf" class="btn btn-outline" download>Download CV ↓</a>
+          <a href="https://www.linkedin.com/in/tjumukoro95" target="_blank" class="btn btn-outline">LinkedIn ↗</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="hero-photo-wrap">
+          <img src="profile image github.jpeg" alt="Terry Joseph-Umukoro" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat reveal">
+      <span class="stat-num">~2</span>
+      <span class="stat-label">Years Exp.</span>
+    </div>
+    <div class="stat reveal">
+      <span class="stat-num">5+</span>
+      <span class="stat-label">Projects</span>
+    </div>
+    <div class="stat reveal">
+      <span class="stat-num">1M+</span>
+      <span class="stat-label">Rows Analysed</span>
+    </div>
+    <div class="stat reveal">
+      <span class="stat-num">5+</span>
+      <span class="stat-label">Tools</span>
+    </div>
+    <div class="stat reveal">
+      <span class="stat-num">3</span>
+      <span class="stat-label">Domains</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-header reveal">
+      <span class="section-label">About Me</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <h2>I solve business problems<br/>using data.</h2>
+        <p>I'm <strong>Terry Joseph-Umukoro</strong>, a data analyst focused on turning messy, raw datasets into structured insights that actually support decisions — not just fill slides.</p>
+        <p>My background in <strong>Banking &amp; Finance</strong> (University of Benin), combined with a <strong>Diploma in Data Analysis from AltSchool Africa</strong>, gives me a rare edge — I understand the business context behind the numbers, not just the data itself.</p>
+        <p>My work spans <strong>e-commerce analytics</strong>, <strong>SaaS product engagement</strong>, and <strong>sales performance</strong> — always with a focus on the business question first, the data second.</p>
+        <p>I care about clean documentation, honest analysis, and communicating findings in a way that non-technical stakeholders can act on.</p>
+        <br/>
+        <a href="mailto:terryjosephumukoro95@gmail.com" class="btn btn-outline" style="display:inline-flex;">Get in Touch ↗</a>
+      </div>
+      <div class="skills-grid reveal">
+        <div class="skill-card">
+          <div class="skill-card-title">Analysis</div>
+          <ul>
+            <li>Exploratory Data Analysis</li>
+            <li>KPI Development</li>
+            <li>Trend Identification</li>
+            <li>Churn &amp; Retention</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-title">Processing</div>
+          <ul>
+            <li>Data Cleaning</li>
+            <li>Power Query</li>
+            <li>Data Modeling</li>
+            <li>DAX</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-title">Visualisation</div>
+          <ul>
+            <li>Dashboard Design</li>
+            <li>Power BI</li>
+            <li>Interactive Reports</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-title">Tools</div>
+          <ul>
+            <li>Excel</li>
+            <li>SQL</li>
+            <li>Power BI</li>
+            <li>Python</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-header reveal">
+      <span class="section-label">Projects</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="projects-grid">
+
+      <!-- PROJECT 1 -->
+      <div class="project-card reveal">
+        <div class="project-number">Project — 01</div>
+        <h3>Sales Dashboard Analysis</h3>
+        <p class="project-goal">Analyse customer behaviour and sales performance to support marketing decisions for a retail business.</p>
+        <div class="project-tags">
+          <span class="tag">Power BI</span>
+          <span class="tag">Power Query</span>
+          <span class="tag">Power Pivot</span>
+          <span class="tag purple">Sales Analytics</span>
+        </div>
+        <ul class="project-highlights">
+          <li>Identified top customer segment (ages 25–34)</li>
+          <li>Discovered peak sales days — Monday &amp; Saturday</li>
+          <li>Detected performance drop between May and June</li>
+        </ul>
+        <a href="https://github.com/Jaytee4000/data-analytics-portfolio/tree/main/sales-dashboard-project/" target="_blank" class="project-link">View Project ↗</a>
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div class="project-card reveal">
+        <div class="project-number">Project — 02</div>
+        <h3>E-Commerce Product Usage &amp; Engagement</h3>
+        <p class="project-goal">Analyse over 1 million transactions to uncover patterns in customer behaviour, engagement, and revenue performance for a UK-based e-commerce platform.</p>
+        <div class="project-tags">
+          <span class="tag">Power BI</span>
+          <span class="tag">Power Query</span>
+          <span class="tag">DAX</span>
+          <span class="tag purple">Product Analytics</span>
+        </div>
+        <ul class="project-highlights">
+          <li>Processed &amp; cleaned 1M+ rows, removing ~23% invalid records</li>
+          <li>Identified repeat customers (75.63%) as primary engagement driver</li>
+          <li>Revealed 24.37% user drop-off after first purchase</li>
+          <li>Uncovered Q4 seasonality and Thursday peak activity</li>
+        </ul>
+        <a href="https://github.com/Jaytee4000/data-analytics-portfolio/tree/main/Product%20Usage%20%26%20Engagement%20Analysis/product-usage-engagement-analysis/" target="_blank" class="project-link">View Project ↗</a>
+      </div>
+
+      <!-- PROJECT 3 -->
+      <div class="project-card reveal">
+        <div class="project-number">Project — 03</div>
+        <h3>LearnPath Pro — SaaS Engagement Analysis</h3>
+        <p class="project-goal">Analyse user engagement and product usage patterns across 2,000 users on an e-learning SaaS platform to surface insights for product and growth teams.</p>
+        <div class="project-tags">
+          <span class="tag">Power BI</span>
+          <span class="tag">DAX</span>
+          <span class="tag purple">SaaS Analytics</span>
+          <span class="tag purple">Churn Analysis</span>
+        </div>
+        <ul class="project-highlights">
+          <li>Free tier churn of 35% vs 5% for Enterprise — identified key drivers</li>
+          <li>19.9% course completion rate flagged as critical engagement gap</li>
+          <li>Live Sessions identified as most underutilised premium feature</li>
+          <li>Nigeria, USA &amp; UK lead acquisition — African market opportunity surfaced</li>
+        </ul>
+        <a href="https://github.com/Jaytee4000/data-analytics-portfolio/tree/main/Product%20Usage%20%26%20Engagement%20Analysis/Learnpath%20Pro/" target="_blank" class="project-link">View Project ↗</a>
+      </div>
+
+      <!-- PROJECT 4 -->
+      <div class="project-card reveal">
+        <div class="project-number">Project — 04</div>
+        <h3>SQL Data Analysis Project</h3>
+        <p class="project-goal">Apply querying and data wrangling skills to extract business insights from structured datasets using SQL.</p>
+        <div class="project-tags">
+          <span class="tag">SQL</span>
+          <span class="tag purple">Data Querying</span>
+        </div>
+        <ul class="project-highlights">
+          <li>Applied core SQL concepts: SELECT, JOIN, GROUP BY, and subqueries</li>
+          <li>Cleaned and structured raw data for downstream analysis</li>
+          <li>Translated business questions into structured query logic</li>
+        </ul>
+        <a href="https://github.com/Jaytee4000/data-analytics-portfolio" target="_blank" class="project-link">View on GitHub ↗</a>
+      </div>
+
+      <!-- PROJECT 5 — WIP -->
+      <div class="project-card wip reveal">
+        <div class="project-number">Project — 05</div>
+        <h3>Python Analytics Project</h3>
+        <p class="project-goal">Building a Python-based data analysis project — applying pandas and visualisation libraries to a real-world dataset with a focus on reproducible, well-documented code.</p>
+        <div class="project-tags">
+          <span class="tag purple">Python</span>
+          <span class="tag purple">Pandas</span>
+          <span class="tag purple">In Progress</span>
+        </div>
+        <ul class="project-highlights">
+          <li>Expanding toolkit beyond Power BI into programmatic analysis</li>
+          <li>Focus on clean, reusable, well-documented code</li>
+        </ul>
+        <span class="wip-label">In Progress</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" style="background: var(--surface); border-top: 1px solid var(--border);">
+    <div class="section-header reveal">
+      <span class="section-label">Certifications</span>
+      <div class="section-line"></div>
+    </div>
+    <h2 class="reveal" style="margin-bottom: 2rem;">Credentials &amp; learning.</h2>
+    <div class="certs-grid">
+      <div class="cert-card reveal">
+        <div class="cert-icon">🎓</div>
+        <div>
+          <div class="cert-issuer">Google / Coursera</div>
+          <div class="cert-name">Google Data Analytics Professional Certificate</div>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-icon">🏫</div>
+        <div>
+          <div class="cert-issuer">AltSchool Africa</div>
+          <div class="cert-name">Diploma in Data Analysis</div>
+        </div>
+      </div>
+      <div class="cert-card pending reveal">
+        <div class="cert-icon">📋</div>
+        <div>
+          <div class="cert-issuer">Microsoft · In Progress</div>
+          <div class="cert-name">Power BI Data Analyst (PL-300)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section id="approach">
+    <div class="section-header reveal">
+      <span class="section-label">How I Work</span>
+      <div class="section-line"></div>
+    </div>
+    <h2 class="reveal" style="margin-bottom:2rem;">A structured workflow,<br/>every time.</h2>
+    <div class="approach-steps">
+      <div class="step reveal">
+        <strong>Define the Problem</strong>
+        <p>Start with the business question — not the data.</p>
+      </div>
+      <div class="step reveal">
+        <strong>Clean &amp; Prepare</strong>
+        <p>Validate, transform, and structure the data for reliable analysis.</p>
+      </div>
+      <div class="step reveal">
+        <strong>Explore &amp; Analyse</strong>
+        <p>Identify trends, patterns, and anomalies through EDA.</p>
+      </div>
+      <div class="step reveal">
+        <strong>Visualise</strong>
+        <p>Build dashboards and visuals that communicate clearly.</p>
+      </div>
+      <div class="step reveal">
+        <strong>Recommend</strong>
+        <p>Deliver actionable insights tied to real business outcomes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <div class="contact-inner">
+      <div class="section-header reveal" style="justify-content:center;">
+        <span class="section-label">Contact</span>
+      </div>
+      <h2 class="reveal visible">Let's work together.</h2>
+      <p class="reveal visible">Open to remote analyst roles globally and hybrid roles within Abuja. Available for full-time positions, freelance projects, and collaborations.</p>
+      <div class="contact-links reveal visible">
+        <a href="Terry Joseph-Umukoro CV.pdf" class="btn btn-primary" download>Download CV ↓</a>
+        <a href="https://mail.google.com/mail/?view=cm&to=terryjosephumukoro95@gmail.com" target="_blank" class="btn btn-outline">Send an Email ↗</a>
+        <a href="https://www.linkedin.com/in/tjumukoro95" target="_blank" class="btn btn-outline">LinkedIn ↗</a>
+        <a href="https://github.com/Jaytee4000/data-analytics-portfolio" target="_blank" class="btn btn-outline">GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Terry Joseph-Umukoro · Data Analyst · Kogi State, Nigeria</p>
+  </footer>
+
+  <!-- SCROLL REVEAL SCRIPT -->
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
